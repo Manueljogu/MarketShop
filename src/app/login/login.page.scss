@@ -1,0 +1,57 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .center-text {
+    text-align: center;
+  }
+  
+  .large-text {   /*la palabra bienvenido*/
+    font-size: 3em; 
+    margin-top: 80px;
+  }
+  
+  .app-title {  /*la palabra skeletonapp*/
+    text-align: center;
+    font-size: 1.5em; 
+    margin-top: 10px;
+  }
+  
+  .footer {
+    text-align: left;
+    font-size: 1em;
+    color: black;
+    position: absolute;
+    bottom: 10px;
+    width: 80%;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  
+  .app-title  {   /*la palabra crea tu cuenta*/
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #007bff; /* Color del enlace */
+  }
+  
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 15px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  ion-input {
+    --padding-start: 0;
+  }

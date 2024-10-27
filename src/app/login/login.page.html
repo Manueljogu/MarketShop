@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Market Shop</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="center-container">
+    <h1 class="center-text large-text">Bienvenido!</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="stacked">Usuario</ion-label>
+            <ion-input [(ngModel)]="user.username" required minlength="3" maxlength="20" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input [(ngModel)]="user.password" required minlength="4" maxlength="4" type="password"></ion-input>
+          </ion-item>
+          <ion-button expand="full" (click)="login()">Ingresar</ion-button>
+
+          <div class="app-title">
+            <a href="#">Crea tu cuenta gratis</a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="footer">App desarrollada por</div>
 </ion-content>
