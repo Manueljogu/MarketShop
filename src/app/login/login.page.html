@@ -19,14 +19,11 @@
             <ion-label position="floating">Contraseña</ion-label>
             <ion-input [(ngModel)]="user.password" required minlength="4" maxlength="4" type="password"></ion-input>
           </ion-item>
-          <ion-col class="button">
-            <ion-button expand="block" (click)="login()">Ingresar</ion-button>
-          </ion-col>
-          <ion-col>
-            <div class="ion-text-center enlace">
-              <a href="registrar">Crea tu Cuenta Gratis</a>
-            </div>
-          </ion-col>
+          <ion-button expand="full" (click)="login()">Ingresar</ion-button>
+
+          <div class="app-title">
+            <a href="registrar">Crea tu Cuenta Gratis</a>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
