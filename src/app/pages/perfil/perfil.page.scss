@@ -1,0 +1,44 @@
+ion-content {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  #container {
+    padding: 16px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 50px 0;
+    font-weight: bold;
+    
+  }
+  
+  ion-item {
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-text {
+    margin-left: 8px;
+  }
+  
+  .icon-center {
+    font-size: 150px;
+    color: var(--ion-color-primary); 
+  }
+  
+  ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+  
+  }
