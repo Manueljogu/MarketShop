@@ -1,29 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Market Shop</ion-title>
+    <ion-title class="app-title">Market Shop</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="center-container">
-    <h1 class="center-text large-text">Market Shop</h1>
+    <h1 class="ion-text-center large-text">Market Shop</h1>
     <img src="../../assets/img/logo.png" alt="logo" class="logo">
     <ion-grid>
       <ion-row>
         <ion-col>
           <ion-item>
-            <ion-label position="stacked">Usuario</ion-label>
+            <ion-label position="floating">Usuario</ion-label>
             <ion-input [(ngModel)]="user.username" required minlength="3" maxlength="20" type="text"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-label position="floating">Contraseña</ion-label>
             <ion-input [(ngModel)]="user.password" required minlength="4" maxlength="4" type="password"></ion-input>
           </ion-item>
-          <ion-button expand="full" (click)="login()">Ingresar</ion-button>
-
-          <div class="app-title">
-            <a href="#">Crea tu cuenta gratis</a>
-          </div>
+          <ion-col class="button">
+            <ion-button expand="block" (click)="login()">Ingresar</ion-button>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center enlace">
+              <a href="registrar">Crea tu Cuenta Gratis</a>
+            </div>
+          </ion-col>
         </ion-col>
       </ion-row>
     </ion-grid>
