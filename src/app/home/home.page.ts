@@ -17,6 +17,7 @@ export class HomePage {
 
   @ViewChild('firstNameInput', { static: false }) firstNameInput?: ElementRef;
   @ViewChild('lastNameInput', { static: false }) lastNameInput?: ElementRef;
+   data: any;
 
   constructor(private router: Router) {
     const navigation = this.router.getCurrentNavigation();

@@ -1,22 +1,7 @@
-.center-text {
-  text-align: center;
-}
-
 .large-text {
   font-size: 3em;
   margin-top: 80px;
-}
-
-.app-title {
-  text-align: center;
-  font-size: 1.5em;
-  margin-top: 20px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 1em;
-  color: gray;
+  font-weight: bold;
 }
 
 .additional-info {
@@ -35,7 +20,6 @@
 }
 
 .footer {
-  text-align: left;
   font-size: 1em;
   color: black;
   position: absolute;
@@ -43,6 +27,10 @@
   width: 80%;
   font-weight: bold;
   padding-left: 10px;
+}
+
+.button {
+  margin-top: 50px; 
 }
 
 
