@@ -14,7 +14,7 @@ export class AppComponent {
     { title: 'Trash', url: '/folder/trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
     { title: 'Home', url: 'home', icon: 'home' },
-    { title: 'Registrar', url: 'registrar', icon: 'reader' },
+    { title: 'Datos Personales', url: 'registrar', icon: 'reader' },
     { title: 'Perfil', url: 'perfil', icon: 'person' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
