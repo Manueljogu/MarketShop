@@ -4,22 +4,19 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 20px;
+    padding: 0px;
   }
-  
-  .center-text {
-    text-align: center;
-  }
-  
-  .large-text {   /*la palabra bienvenido*/
+
+  .large-text {   /*la palabra market shop*/
     font-size: 3em; 
     margin-top: 80px;
+    font-weight: bold;
   }
-  
-  .app-title {  /*la palabra market shop*/
+
+  .boton {  /*boton*/
     text-align: center;
-    font-size: 1.5em; 
-    margin-top: 10px;
+    font-size: 2em; 
+    margin-top: 100px;
   }
   
   .footer {
@@ -36,24 +33,24 @@
   .app-title  {   /*la palabra crea tu cuenta*/
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 2px;
     font-size: 1em;
     text-decoration: none;
     color: #007bff; /* Color del enlace */
   }
   
-  ion-item {
-    --padding-start: 0;
+  ion-item { /* separacion del usuario y contraseña*/
+    --padding-start: 0; /* izq o der*/
     --inner-padding-end: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
-  ion-button {
-    margin-top: 20px;
+  ion-button {  /* margen del boton ingresar*/
+    margin-top: 0px;
   }
   
-  ion-input {
-    --padding-start: 0;
+  ion-input { /* largo de usuario y contraseña*/
+    --padding-start: 0px;
   }
 
   .logo-container {
