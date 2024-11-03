@@ -36,4 +36,12 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
+
+/* estilo para el calendario */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* estilo fondo */
+ion-app, ion-content {
+    --background: radial-grandient(circle, #FBFBFB 0%, cornflowerblue 100%);
+    background-color: radial-grandient(circle, #FBFBFB 0%, cornflowerblue 100%);
+}
