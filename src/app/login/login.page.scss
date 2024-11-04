@@ -40,9 +40,9 @@
   }
   
   ion-item { /* separacion del usuario y contraseña*/
-    --padding-start: 0; /* izq o der*/
-    --inner-padding-end: 0;
-    margin-bottom: 20px;
+    --padding-start: 20px; /* izq o der*/
+    --inner-padding-end: 20px;
+    margin-bottom: 10px;
   }
   
   ion-button {  /* margen del boton ingresar*/
