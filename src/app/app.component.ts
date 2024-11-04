@@ -15,7 +15,7 @@ export class AppComponent {
     { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
     { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Cerrar Sesión', url: '/folder/spam', icon: 'lock-closed' },
+    { title: 'Cerrar Sesión', url: 'login', icon: 'lock-closed' },
   ];
  
   constructor() {}
