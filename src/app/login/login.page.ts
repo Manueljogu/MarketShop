@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController, NavController } from '@ionic/angular';
+import { MyserviceService } from 'src/app/services/myservice.service';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +10,85 @@ import { Router } from '@angular/router';
 })
 export class LoginPage {
   user = {
-    username: '',
+    email: '',
     password: ''
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private alertController: AlertController, private navCtrl: NavController, private myservice: MyserviceService) {}
 
-  login() {
-    if (this.user.username.length >= 3 && this.user.username.length <= 20 && this.user.password.length === 4) {
-      this.router.navigate(['/home'], { state: { user: this.user } });
-    } else {
-      alert('Por favor, ingrese un usuario y una contraseña válidos.');
+  ngOnInit() {
+  }
+
+  // Método para mostrar alerta de error
+  async mostrarAlerta(mensaje: string) {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: mensaje,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+   // Función para validar el formato del email
+   validarEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular básica para validar email
+    return emailRegex.test(email);
+  }
+
+  async  login() {
+   // Verificar que el campo de correo no esté vacío
+   if (!this.user.email) {
+    this.mostrarAlerta('El campo de correo no puede estar vacío.');
+    return;
+  }
+
+  // Validar el formato del correo
+  if (!this.validarEmail(this.user.email)) {
+    this.mostrarAlerta('El formato del correo es inválido.');
+    return;
+  }
+
+  // Verificar que la contraseña no esté vacía
+  if (!this.user.password) {
+    this.mostrarAlerta('El campo de contraseña no puede estar vacío.');
+    return;
+  }
+
+  // Verificar que la contraseña tenga máximo 4 caracteres
+  if (this.user.password.length > 4) {
+    this.mostrarAlerta('La contraseña no puede tener más de 4 caracteres.');
+    return;
+  }
+
+
+  /*
+  // Si todas las validaciones son correctas, navega a la página "home"
+  this.navCtrl.navigateForward(['/home'], {
+    queryParams: {
+      email: this.email,
+      password: this.password
     }
+  });
+
+  */
+
+  // Validar credenciales con el servicio de autenticación
+  const isAuthenticated = await this.myservice.loginUser(this.user.email, this.user.password);
+  if (isAuthenticated) {
+    // Si la autenticación es correcta, navega a la página "home"
+
+     // Guardar el nombre del usuario en Local Storage
+     localStorage.setItem('username', this.user.email );
+
+    this.navCtrl.navigateForward(['/home'], {
+      queryParams: {
+        email: this.user.email
+      }
+    });
+  } else {
+    // Muestra alerta si las credenciales son incorrectas
+    this.mostrarAlerta('Correo o contraseña incorrectos.');
   }
 }
+
+} 
