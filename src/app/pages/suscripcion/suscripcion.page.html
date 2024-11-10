@@ -5,36 +5,60 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="center-container">
-  <ion-header>
-    <ion-toolbar>
-      <img src="../../assets/img/logo.png" alt="logo" class="logo">
-      <ion-title size="large" class="large-text center-container">Suscripción</ion-title>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
+  <h1 class="ion-text-center large-text">Formulario de Registro</h1>
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Nombre <ion-text color="dark">(*)</ion-text></ion-label>
+      <ion-input placeholder="Ingrese Nombre" [(ngModel)]="user.firstName"></ion-input>
+    </ion-item>
 
-          <ion-item>
-            <ion-label position="floating">Usuario</ion-label>
-            <ion-input [(ngModel)]="user.username" required minlength="3" maxlength="20" type="text"></ion-input>
-          </ion-item>
-      
-     
-          <ion-item>
-            <ion-label position="floating">Contraseña</ion-label>
-            <ion-input [(ngModel)]="user.password" required minlength="4" maxlength="4" type="password"></ion-input>
-          </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido <ion-text color="dark">(*)</ion-text></ion-label>
+      <ion-input placeholder="Ingrese Apellido" [(ngModel)]="user.lastName"></ion-input>
+    </ion-item>
 
-          <ion-col>
-            <ion-button expand="block" (click)="login()">Registrar</ion-button>
-          </ion-col>
+    <ion-item>
+      <ion-label position="stacked">Email <ion-text color="dark">(*)</ion-text></ion-label>
+      <ion-input placeholder="Ingrese Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
 
-      
-         </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-toolbar>
-  </ion-header>
-</div>
-<div class="footer">App desarrollada por</div>
+    <ion-item>
+      <ion-label position="stacked">Contraseña <ion-text color="dark">(*)</ion-text></ion-label>
+      <ion-input type="password" placeholder="Ingrese Contraseña" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Repetir Contraseña <ion-text color="black">(*)</ion-text></ion-label>
+      <ion-input type="password" placeholder="Repita la Contraseña" [(ngModel)]="user.confirmPassword"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nivel de Educación <ion-text color="dark">(*)</ion-text></ion-label>
+      <ion-select placeholder="Seleccione Nivel" [(ngModel)]="user.educationLevel">
+        <ion-select-option value="Primaria">Primaria</ion-select-option>
+        <ion-select-option value="Secundaria">Secundaria</ion-select-option>
+        <ion-select-option value="Universitaria">Universitaria</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="ion-text-left">
+      <ion-label position="stacked" class="ion-padding-bottom">Fecha de Nacimiento <ion-text color="black">(*)</ion-text></ion-label>
+      <div class="date-container">
+        <input matInput [matDatepicker]="picker" placeholder="Fecha Nacimiento" [(ngModel)]="user.birthDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      </div>
+      <mat-datepicker #picker></mat-datepicker>
+    </ion-item>
+    
+
+    <ion-col>
+      <div class="buttons-container">
+        <ion-button expand="block" (click)="login()">Registrar</ion-button>
+        <ion-button expand="block" (click)="cancel()">Cancelar</ion-button>
+      </div>
+    </ion-col>
+  </ion-card>
+
+  <div class="footer">App desarrollada por</div>
 </ion-content>
+

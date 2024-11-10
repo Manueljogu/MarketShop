@@ -7,11 +7,33 @@
     padding: 20px;
   }
 
-.large-text {   /*la palabra suscripcion*/
+.large-text {   /*la palabra formulario de registro*/
     font-size: 2em; 
     margin-top: 80px;
     font-weight: bold;
   }
+
+  input {
+    padding-right: 0px; /* campo de la fecha de nacimiento */
+    margin-top: 0px;
+  }
+  
+  mat-datepicker-toggle {
+    position: center;
+    right: 10px; /* Ajusta la distancia del ícono respecto al borde derecho */
+    
+  }
+
+  button {
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Espacio entre los botones */
+  margin-top: 30px;
+}
 
 
   .footer {
@@ -24,10 +46,6 @@
     font-weight: bold;
     padding-left: 10px;
   }
+  
 
-  .logo {     /*tamaño y animacion del logo*/
-    width: 200px;
-    height: auto;
-    
-  }
   
