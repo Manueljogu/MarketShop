@@ -38,7 +38,7 @@ export class SuscripcionPage implements OnInit {
   }
 
   ngOnInit(): void {
-    // Puedes añadir lógica adicional aquí si es necesario
+    
   }
 
   login() {
@@ -88,7 +88,7 @@ export class SuscripcionPage implements OnInit {
   
     // Si todas las validaciones pasan, continúa con el registro
     console.log("Usuario registrado correctamente:", this.user);
-    this.router.navigate(['/login']); // Cambia '/login' a la ruta deseada
+    this.router.navigate(['/login']); 
   }
 
   cancel() {
