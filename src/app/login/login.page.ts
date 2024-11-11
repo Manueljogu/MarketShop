@@ -10,8 +10,8 @@ import { MyserviceService } from 'src/app/services/myservice.service';
 })
 export class LoginPage {
   
-    email: string = ''; // Initialize email as an empty string
-    password: string = ''; // Initialize password as an empty string
+    email: string = ''; 
+    password: string = ''; 
   
 
   constructor(
