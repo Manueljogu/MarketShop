@@ -29,20 +29,20 @@ export class MyserviceService {
         apellido TEXT,
         email TEXT UNIQUE,
         password TEXT,
-        nivel_educacion TEXT,
-        fecha_nacimiento TEXT
+        educationLevel TEXT,
+        birthDate TEXT
       )`,
       []
     );
   }
 
   // Registrar usuario con los nuevos campos
-  async registerUser(nombre: string, apellido: string, email: string, password: string, nivelEducacion: string, fechaNacimiento: string): Promise<boolean> {
+  async registerUser(nombre: string, apellido: string, email: string, password: string, educationLevel: string, birthDate: string): Promise<boolean> {
     try {
       await this.dbInstance.executeSql(
-        `INSERT INTO users (nombre, apellido, email, password, nivel_educacion, fecha_nacimiento)
+        `INSERT INTO users (nombre, apellido, email, password, educationLevel, birthDate)
          VALUES (?, ?, ?, ?, ?, ?)`,
-        [nombre, apellido, email, password, nivelEducacion, fechaNacimiento]
+        [nombre, apellido, email, password, educationLevel, birthDate]
       );
       return true;
     } catch (error) {
