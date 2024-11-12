@@ -7,9 +7,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h1> Pàgina No Encontrada </h1>
+  <ion-img src="assets/img/404.svg" ></ion-img>
 
-  <h1 class="titulo">NOTFOUND</h1>
-  <ion-icon name="sad-outline" class="icon-center"></ion-icon>
-
+  <ion-button routerLink="/login" expand="block" class="ion-margin-top">
+    <ion-icon name="home" slot="start"></ion-icon>
+    Volver al Login
+  </ion-button>
+  
+  
 </ion-content>
