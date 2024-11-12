@@ -1,3 +1,26 @@
-<p>
-  certificaciones works!
-</p>
+<h2 class="ion-text-center">Certificaciones</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <!-- Nombre del Certificado -->
+  <label for="nombreCertificado">Nombre del Certificado:</label>
+  <input id="nombreCertificado" [(ngModel)]="nombreCertificado" name="nombreCertificado" required placeholder="Nombre del certificado" />
+
+  <!-- Fecha de Obtención -->
+  <label for="fechaObtencion">Fecha de Obtención:</label>
+  <input id="fechaObtencion" type="date" [(ngModel)]="fechaObtencion" name="fechaObtencion" required placeholder="Fecha de obtención" />
+
+  <!-- ¿El Certificado Vence? -->
+  <label for="certificadoVence">
+    ¿El Certificado Vence?
+    <input type="checkbox" id="certificadoVence" [(ngModel)]="certificadoVence" name="certificadoVence" />
+  </label>
+
+  <!-- Fecha de Vencimiento (solo si el certificado vence) -->
+  <label *ngIf="certificadoVence" for="fechaVencimiento">Fecha de Vencimiento:</label>
+  <input *ngIf="certificadoVence" id="fechaVencimiento" type="date" [(ngModel)]="fechaVencimiento" name="fechaVencimiento" placeholder="Fecha de vencimiento" />
+
+  <!-- Botón de Guardar -->
+  <button type="submit">Guardar</button>
+</form>
+
+

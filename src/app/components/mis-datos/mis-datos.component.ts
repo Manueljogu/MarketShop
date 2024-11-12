@@ -5,10 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mis-datos.component.html',
   styleUrls: ['./mis-datos.component.scss'],
 })
-export class MisDatosComponent  implements OnInit {
+export class MisDatosComponent {
+  user = {
+    firstName: '',
+    lastName: '',
+    educationLevel: '',
+    birthDate: ''
+  };
 
-  constructor() { }
 
-  ngOnInit() {}
-
+  showInfo() {
+    console.log('User Info:', this.user);
+  }
 }

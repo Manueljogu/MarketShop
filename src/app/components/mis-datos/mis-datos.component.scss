@@ -1,0 +1,52 @@
+/* Título del formulario */
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario en general */
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  /* Campos con validación */
+  ion-input[required], ion-select[required] {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  ion-input.ng-invalid.ng-touched, ion-select.ng-invalid.ng-touched {
+    border-color: #e74c3c; /* Rojo si el campo es inválido */
+  }
+  
+  /* Estilo para el campo de fecha de nacimiento */
+  ion-item .mat-datepicker-toggle {
+    position: absolute;
+    right: 10px;
+  }
+  
+  mat-datepicker-toggle.mat-suffix {
+    margin-top: 0px;
+  }
+  
+  button {    /* Estilo para los botones */
+    background-color: #3880ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  ion-button:hover {
+    background-color: #006bb3;
+  }
+  
+  ion-button:focus {
+    outline: none;
+  }
+  

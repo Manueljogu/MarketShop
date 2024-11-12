@@ -1,3 +1,30 @@
-<p>
-  experiencia-laboral works!
-</p>
+<h2 class="ion-text-center">Experiencia Laboral</h2>
+
+<form (ngSubmit)="onSubmit()">
+  
+  <label for="empresa">Empresa:</label>
+  <input id="empresa" [(ngModel)]="empresa" name="empresa" required placeholder="Nombre de la empresa" />
+
+  
+  <label for="anoInicio">Año de Inicio:</label>
+  <input id="anoInicio" type="number" [(ngModel)]="anoInicio" name="anoInicio" required placeholder="Año de inicio" />
+
+  
+  <label for="trabajaActualmente">
+    ¿Actualmente Trabaja Aquí?
+    <input type="checkbox" id="trabajaActualmente" [(ngModel)]="trabajaActualmente" name="trabajaActualmente" />
+  </label>
+
+  
+  <label *ngIf="!trabajaActualmente" for="anoTermino">Año de Término:</label>
+  <input *ngIf="!trabajaActualmente" id="anoTermino" [(ngModel)]="anoTermino" name="anoTermino" placeholder="Año de término" />
+
+  
+  <label for="cargo">Cargo:</label>
+  <input id="cargo" [(ngModel)]="cargo" name="cargo" required placeholder="Cargo desempeñado" />
+
+  
+  <button type="submit">Guardar</button>
+</form>
+
+

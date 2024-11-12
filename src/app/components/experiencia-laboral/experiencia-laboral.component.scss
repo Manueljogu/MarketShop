@@ -1,0 +1,61 @@
+
+form {  /* Contenedor del formulario */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px;
+    padding: 0px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  label {    /* Estilo para los labels */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  
+  input {    /* Estilo de los inputs */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  
+  button {    /* Estilo para los botones */
+    background-color: #3880ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #006bb3;
+  }
+  
+  /* Estilo para inputs con error (si se implementa validación) */
+  input.ng-invalid.ng-touched {
+    border-color: #e74c3c;
+  }
+  
+  /* Caja de verificación (checkbox) */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Ajuste para el input de Año de Término */
+  label input[type="checkbox"]:not(:checked) + label {
+    display: none;
+  }
+  

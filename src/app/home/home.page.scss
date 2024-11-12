@@ -1,36 +1,53 @@
-.large-text {
-  font-size: 3em;
-  margin-top: 80px;
-  font-weight: bold;
-}
 
-.additional-info { /*la palabra informacion adicional*/
-  text-align: center;
-  font-size: 1.5em;
-  margin: 40px 0;
-  font-weight: bold;
-}
-
-.user-info {    /*la palabra usuario*/
-  font-size: 1.5em;
-  text-align: center;
-  margin-bottom: 50px;
+h1 {     /* palabra bienvenido */
+  font-size: 2.5rem;
+  color: #040405; 
   margin-top: 50px;
+  text-align: center;
+}
+
+
+.user-info {   /* palabra usuario */
+  font-size: 1.5rem;
+  color: #222;
+  text-align: center;
+  margin: 40px;
   font-weight: bold;
 }
 
-.footer {
-  font-size: 1em;
-  color: black;
-  position: absolute;
-  bottom: 10px;
-  width: 80%;
-  font-weight: bold;
-  padding-left: 10px;
+
+ion-segment {   /* Segmentos */
+  margin: 0px;
+  --background: #f4f5f8; 
+  --indicator-color: #3880ff; 
 }
 
-.button {
-  margin-top: 50px; 
+ion-segment-button {    /* texto dentro del segmento */
+  --color: #0c0c0c; 
+  --color-checked: #060505; 
+  --background-checked: #3880ff; 
+  --background: #e0e0e0; 
+  border-radius: 5px;
+  margin: 0 5px;
 }
+
+
+.component-container {   /* Contenedor del contenido  */
+  margin: 20px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.component-container p { /* Texto centrado */
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+
+
 
 
