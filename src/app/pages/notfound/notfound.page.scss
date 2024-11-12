@@ -1,21 +1,8 @@
-.titulo {
+
+  .info {    /*la palabra pagina no encontrada*/
+    font-size: 1.5em;
     text-align: center;
-    font-size: 1.8em;
-    margin: 50px 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
     font-weight: bold;
-  }
-
-  ion-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-
-  }
-
-  .icon-center {
-    font-size: 100px;
-    color: var(--ion-color-primary); 
   }
