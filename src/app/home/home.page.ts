@@ -17,9 +17,12 @@ export class HomePage {
 
   constructor(private route: ActivatedRoute) {}
 
+  username: string = '';
+
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.email = params['email'];
+      this.username = localStorage.getItem('username') || 'Invitado';
     });
   }
 }
