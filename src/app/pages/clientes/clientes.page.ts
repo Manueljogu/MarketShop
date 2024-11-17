@@ -4,6 +4,7 @@ import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
 interface Usuario {
+  id: number;
   name: string;
   email: string;
 }
@@ -15,7 +16,7 @@ interface Usuario {
 })
 export class ClientesPage implements OnInit {
   users: Usuario[] = [];
-  nuevoUsuario: Usuario = { name: '', email: '' };
+  nuevoUsuario: Usuario = { id: 0, name: '', email: '' };
 
   constructor(
     private miapiService: MiapiService, 
@@ -53,10 +54,22 @@ export class ClientesPage implements OnInit {
       (response) => {
         this.mostrarAlerta('Usuario agregado: ' + response);
         this.users.push(response);
-        this.nuevoUsuario = { name: '', email: '' };
+        this.nuevoUsuario = { id: 0, name: '', email: '' };
       },
       (error) => {
         this.mostrarAlerta('Error al agregar el usuario: ' + error);
+      }
+    );
+  }
+  eliminarUsuario(id: number) {
+    this.miapiService.deleteUser(id).subscribe(
+      (response) => {
+        // Aquí actualizas la lista de usuarios tras eliminar
+        this.users = this.users.filter(user => user.id !== id);
+        this.mostrarAlerta('Usuario eliminado');
+      },
+      (error) => {
+        this.mostrarAlerta('Error al eliminar el usuario');
       }
     );
   }
