@@ -12,6 +12,7 @@ export class AppComponent {
     { title: 'Home', url: 'home', icon: 'home' },
     { title: 'Datos Personales', url: 'registrar', icon: 'reader' },
     { title: 'Perfil', url: 'perfil', icon: 'person' },
+    { title: 'Clientes', url: 'clientes', icon: 'people' },
     { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
     { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
