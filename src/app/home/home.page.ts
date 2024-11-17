@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -6,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit{
-  user: any = {
-    username: '',
-  };
+export class HomePage {
+  
+    email: string = '';
+ 
 
   activeComponent: string = 'experienciaLaboral';
 
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // Puedes inicializar el usuario aquí o usar un servicio para obtener el nombre de usuario.
+    this.route.queryParams.subscribe(params => {
+      this.email = params['email'];
+    });
   }
 }
