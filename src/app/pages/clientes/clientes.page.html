@@ -8,26 +8,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let user of users">
-      <ion-label>
-        <h2>{{ user.name }}</h2>
-        <p>{{ user.email }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <h1 class="ion-text-center titulo">Lista de Clientes</h1>
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item *ngFor="let user of users">
+              <ion-label>
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.email }}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
 
 
   <!-- Formulario para agregar un nuevo usuario -->
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="nuevoUsuario.name" placeholder="Ingresa el nombre"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input [(ngModel)]="nuevoUsuario.email" placeholder="Ingresa el correo electrónico"></ion-input>
-  </ion-item>
-
-  <ion-button expand="full" (click)="agregarUsuario()">Agregar Usuario</ion-button>
+          <ion-card class="agregar-usuario-card">
+            <ion-card-header>
+              <ion-card-title>Agregar Nuevo Usuario</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input [(ngModel)]="nuevoUsuario.name" type="text" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Correo</ion-label>
+                <ion-input [(ngModel)]="nuevoUsuario.email" type="email" required></ion-input>
+              </ion-item>
+              <ion-button expand="block" color="secondary" (click)="agregarUsuario()">Agregar Usuario</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

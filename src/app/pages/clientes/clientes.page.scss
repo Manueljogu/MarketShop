@@ -1,0 +1,49 @@
+agregar-usuario-card {  /* card de agregar nuevo usuario */
+    margin: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  
+    border-radius: 12px;
+    background-color: #ffffff;  
+  }
+  
+  
+  ion-card-header {  /* card de la palabra agregar nuevo usuario */
+    padding: 15px;  
+    background-color: #f5f5f5;  
+    border-radius: 12px 12px 0 0;  
+  }
+  
+  ion-card-content {
+    padding: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 5px;  /* Espacio entre los campos nombre y correo */
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-input {
+    font-size: 1em;
+    padding: 12px;  /* Aumento de espacio para mejor legibilidad */
+    border-radius: 8px;  /* Bordes redondeados */
+    border: 1px solid #060606; 
+  }
+  
+  ion-button {
+    border-radius: 50px;  /* Botón con bordes redondeados */
+    margin-top: 20px;
+    background-color: #3880ff;  /* Color primario */
+    color: white;
+    font-size: 1.1em;
+  }
+
+    .titulo {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 50px 0;
+    font-weight: bold;
+  }
+
+  
