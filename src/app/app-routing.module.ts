@@ -41,9 +41,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
   },
   {
+    path: 'map',
+    loadChildren: () => import('./pages/map/map.module').then( m => m.MapPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
+
+
 
 
 
