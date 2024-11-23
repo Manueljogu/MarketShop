@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'Datos Personales', url: 'registrar', icon: 'reader' },
     { title: 'Perfil', url: 'perfil', icon: 'person' },
     { title: 'Clientes', url: 'clientes', icon: 'people' },
+    { title: 'Camara', url: 'camara', icon: 'camera' },
     { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
     { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
