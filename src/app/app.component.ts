@@ -10,6 +10,7 @@ export class AppComponent {
 
     
     { title: 'Home', url: 'home', icon: 'home' },
+    { title: 'Inicio', url: 'inicio', icon: 'star' },
     { title: 'Productos', url: 'productos', icon: 'bag' },
     { title: 'Datos Personales', url: 'registrar', icon: 'reader' },
     { title: 'Perfil', url: 'perfil', icon: 'person' },

@@ -1,0 +1,51 @@
+ /* Estilos para el ion-card a partir de aqui */
+ .custom-card {  /* borde de cada card */
+    background-color: #ffeadc; /* Fondo color amarillo claro */
+    border: 1px solid #0b0b0b; /* Borde color dorado */
+    border-radius: 20px;
+  }
+
+    .custom-card {
+    position: relative;
+    height: 220px; /* Ajusta según lo necesario */
+    background-size: contain;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-end;
+    color: white; /* Contraste para texto */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para texto */
+  }
+  
+  .card-content { /* palabra moda */
+    background: rgba(8, 34, 231, 0.668); /* Fondo semitransparente detrás del texto */
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 12px 12px; /* Ajusta el borde inferior */
+  }
+  
+  .card-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .card-content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
+  .user-info {   /* palabra usuario */
+    font-size: 1.5rem;
+    color: #222;
+    text-align: center;
+    margin: 40px;
+    font-weight: bold;
+  }
+  h1 {     /* palabra bienvenido */
+    font-size: 2.5rem;
+    color: #040405; 
+    margin-top: 50px;
+    text-align: center;
+  }
+  

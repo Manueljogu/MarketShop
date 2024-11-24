@@ -80,7 +80,7 @@ export class LoginPage {
       // Guardar el nombre del usuario en Local Storage
       localStorage.setItem('username', this.email);
 
-      this.navCtrl.navigateForward(['/home'], {
+      this.navCtrl.navigateForward(['/inicio'], {
         queryParams: {
           email: this.email
         }
