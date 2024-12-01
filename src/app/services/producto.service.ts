@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
+export class ProductoService {
   private baseUrl = 'https://fakestoreapi.com/products';
 
   constructor(private http: HttpClient) {}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/producto.service';
+import { ProductoService } from 'src/app/services/producto.service';
 
 
 @Component({
@@ -11,10 +11,10 @@ export class ProductosPage implements OnInit {
   products: any[] = [];
   error: string | null = null;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private productoService: ProductoService) {}
 
   ngOnInit() {
-    this.apiService.getProducts().subscribe({
+    this.productoService.getProducts().subscribe({
       next: (data: any) => { // Cambia `data` a un tipo adecuado si lo conoces
         this.products = data;
         console.log('Productos:', this.products);

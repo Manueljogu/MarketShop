@@ -15,7 +15,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './services/producto.service';
+
+import { ProductoService } from './services/producto.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +32,7 @@ import { ApiService } from './services/producto.service';
     MatButtonModule,
     HttpClientModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },SQLite, ApiService, provideAnimationsAsync()],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },SQLite, ProductoService, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
