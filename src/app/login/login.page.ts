@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
-//import { MyserviceService } from 'src/app/services/myservice.service';
+import { MyserviceService } from 'src/app/services/myservice.service';
 
 @Component({
   selector: 'app-login',
@@ -18,8 +18,8 @@ export class LoginPage {
     private router: Router,
     private alertController: AlertController,
     private navCtrl: NavController,
-    
-  ) {} //private myservice: MyserviceService
+    private myservice: MyserviceService
+  ) {} 
 
   ngOnInit() {}
 
@@ -63,7 +63,7 @@ export class LoginPage {
       this.mostrarAlerta('La contraseña no puede tener más de 4 caracteres.');
       return;
     }
-
+/*
       // Si todas las validaciones son correctas, navega a la página "home"
     this.navCtrl.navigateForward(['/home'], {
       queryParams: {
@@ -71,17 +71,12 @@ export class LoginPage {
       password: this.password
     }
   });
+*/
 
-  }
-  CrearCuenta() {
-    this.navCtrl.navigateForward(['/suscripcion']);
-
-
-/*
     // Validar credenciales con el servicio de autenticación
     const isAuthenticated = await this.myservice.loginUser(this.email, this.password);
     if (isAuthenticated) {
-      // Si la autenticación es correcta, navega a la página "home"
+      // Si la autenticación es correcta, navega a la página "inicio"
       
       // Guardar el nombre del usuario en Local Storage
       localStorage.setItem('username', this.email);
@@ -94,7 +89,11 @@ export class LoginPage {
     } else {
       // Muestra alerta si las credenciales son incorrectas
       this.mostrarAlerta('Correo o contraseña incorrectos.');
-    }*/
+    }
+
+  }
+  CrearCuenta() {
+    this.navCtrl.navigateForward(['/suscripcion']);
   }
 }
 

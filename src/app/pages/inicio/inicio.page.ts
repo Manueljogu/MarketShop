@@ -22,7 +22,7 @@ export class InicioPage {
   email: string = '';
   password: string = '';
   username: string = '';
-  bienvenidos: string = 'Bienvenid@';
+  bienvenidos: string = 'Bienvenido';
 
   constructor(
     private route: ActivatedRoute,
